@@ -9,12 +9,15 @@ class Fetch extends React.Component {
         // }
     }
     componentDidMount () {
-        getSportData().then((data) => console.log(data))
-        console.log(this.state.sportData)
+        getSportData().then((data) => this.setState(() => {
+            console.log(data,'ss');
+            return({sportData: data})
+        }))
     }
     render() {
+        console.log(this.state.sportData,'dd')
         return (
-            <div>ahmed {}</div>
+            <div>ahmed {JSON.stringify(this.state.sportData || 'not availabe')}</div>
             );
         }
         
