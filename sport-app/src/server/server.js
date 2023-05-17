@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
   .then(response => response.json())
   .then(data => {
     res.send(data)
+    // res.send({bla:'dlkdjf',ete:'dlfkjef',deet: 33})
   })
   .catch(error => {
     console.error(error);
